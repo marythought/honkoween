@@ -1,7 +1,7 @@
 # Happy Honkoween
 
 ## Description
-**Honkoween** A Ruby twitter bot built in a few hours (and tweaked after Halloween 2015) that tweets a link to "Mambo Number Honk" in the days leading up to Halloween. Lives at (www.twitter.com/honkoween)[http://www.twitter.com/honkoween].
+**Honkoween** A Ruby twitter bot built in a few hours (and tweaked after Halloween 2015) that tweets a link to "Mambo Number Honk" in the days leading up to Halloween. Lives at [www.twitter.com/honkoween](http://www.twitter.com/honkoween).
 
 ## TODOS:
 * add some more Halloween messages
