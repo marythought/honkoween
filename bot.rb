@@ -11,24 +11,23 @@ client = Twitter::REST::Client.new do |config|
   config.access_token_secret = ENV['TOKEN_SECRET']
 end
 
-tweet_time = "07:06PM"
-halloween = Time.local(2015,10,31,00,00,00)
+tweet_time = "07:00PM"
+halloween = Time.local(2016,10,31,00,00,00)
 
 loop do
   t = Time.now
-  day = t.day
   time = t.strftime("%I:%M%p") #"07:44PM"
   days_remaining = halloween.day - t.day
-  if day == halloween.day && t.strftime == "08:00AM"
+  if t.day == halloween.day && time == "08:00AM"
     client.update("HONK if u like HONKIN https://youtu.be/TrsvTqcMrKo")
     sleep 36000
-  elsif day == halloween.day && time == tweet_time
+  elsif t.day == halloween.day && time == tweet_time
     client.update("HAPPY HONKOWEEN! https://youtu.be/TrsvTqcMrKo")
     sleep 36000
-  elsif day == 1 && t.strftime == "08:00AM"
+  elsif t.month == 11 && t.day == 1 && time == "08:00AM"
     client.update("See you next scare... https://youtu.be/TrsvTqcMrKo")
     break
-  elsif time == tweet_time
+  elsif t.month == 10 && time == tweet_time
     client.update("Only #{days_remaining} days until Honkoween! https://youtu.be/TrsvTqcMrKo")
     sleep 36000
   end
